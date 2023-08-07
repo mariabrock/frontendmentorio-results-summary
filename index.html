@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,500;0,700;1,800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="./styles.css" type="text/css" />
+
+    <title>Frontend Mentor | Results summary component</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="results">
+        <p>Your Result</p>
+        <div class="circle">
+          <p class="result">76</p>
+          <p class="result2">of 100</p>
+        </div>
+        <div class="text">
+          <h2>Great</h2>
+          <p class="subtext">
+            You scored higher than 65% of the people who have taken these tests.
+          </p>
+        </div>
+      </div>
+
+      <div class="summary">
+        <h3>Summary</h3>
+        <div class="summary-item" id="reaction">
+          <img src="./assets/icon-reaction.svg" alt="" />
+          <p id="reaction-head">Reaction</p>
+          <p>80 <span class="lowlight">/ 100</span></p>
+        </div>
+        <div class="summary-item" id="memory">
+          <img src="./assets/icon-memory.svg" alt="" />
+          <p id="memory-head">Memory</p>
+          <p>92 <span class="lowlight">/ 100</span></p>
+        </div>
+        <div class="summary-item" id="verbal">
+          <img src="./assets/icon-verbal.svg" alt="" />
+          <p id="verbal-head">Verbal</p>
+          <p>61 <span class="lowlight">/ 100</span></p>
+        </div>
+        <div class="summary-item" id="visual">
+          <img src="./assets/icon-visual.svg" alt="" />
+          <p id="visual-head">Visual</p>
+          <p>72 <span class="lowlight">/ 100</span></p>
+        </div>
+
+        <button class="button button-continue">Continue</button>
+      </div>
+
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Maria Brock</a>.
+      </div>
+    </div>
+  </body>
+</html>
+
+<!-- https://www.rapidtables.com/convert/color/hsl-to-rgb.html -->
+
+<!-- https://www.w3schools.com/cssref/tryit.php?filename=trycss3_opacity_box2 -->

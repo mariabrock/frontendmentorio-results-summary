@@ -1,0 +1,153 @@
+* {
+  font-family: 'Hanken Grotesk', sans-serif;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+}
+
+.results {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+  color: hsl(241, 100%, 89%);
+}
+
+
+h2 {
+  color: white;
+}
+
+.result {
+  font-size: 300%;
+  font-weight: 800;
+  margin: 1rem;
+}
+
+.result2 {
+  color: hsl(241, 100%, 89%);
+}
+
+.circle {
+  margin-left: 7.5rem;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background-image: linear-gradient(hsl(256, 72%, 46%, 1),  hsl(241, 72%, 46%, 0));
+  color: hsl(0, 0%, 100%);
+}
+
+.text {
+  margin: .5rem;
+} 
+
+.subtext {
+  margin: 2rem;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 2rem;
+  color: hsl(224, 30%, 27%);
+}
+
+.summary-item {
+  display: flex;
+  flex-direction: row;
+}
+
+img {
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+
+.lowlight {
+  color: lightgray;
+}
+
+#reaction-head {
+  color: hsl(0, 100%, 67%);
+  margin-right: 6rem;
+}
+
+#memory-head {
+  color: hsl(39, 100%, 56%);
+  margin-right: 6rem;
+}
+
+#verbal-head {
+  color: hsl(166, 100%, 37%);
+  margin-right: 7rem;
+}
+
+#visual-head {
+  color: hsl(234, 85%, 45%);
+  margin-right: 7rem;
+}
+
+#reaction {
+  background-color: rgba(255, 90, 87, 0.1);
+  border-radius: 10px;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+#memory {
+  background-color: rgba(255, 176, 31, 0.1);
+  border-radius: 10px;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+#verbal {
+  background-color: rgba(0, 189, 145, 0.1);
+  border-radius: 10px;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+#visual {
+  background-color: rgba(17, 37, 212, 0.1);
+  border-radius: 10px;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
+}
+
+.button-continue {
+  border: none;
+  margin-top: .5rem;
+  padding: 14px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 30px;
+  background-color: hsl(224, 30%, 27%);
+  color: hsl(0, 0%, 100%);
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
