@@ -1,13 +1,17 @@
 * {
-  font-family: 'Hanken Grotesk', sans-serif;
+  
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html, body {
+  font-family: 'Hanken Grotesk', sans-serif;
   height: 100%;
-  margin: 0;
-  padding: 0;
+  min-height: 100vh;
   font-size: 18px;
   background-color: hsl(0, 0%, 100%);
+  
 }
 
 .container {
@@ -18,13 +22,17 @@ html, body {
 }
 
 .card {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-areas:
+   "results summary";
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
   justify-content: center;
-  max-width: 750px;
+  align-content: center;
+  max-width: 50%;
+  margin-left: 25rem;
   margin-top: 5rem;
-  margin-bottom: 3rem;
-  margin-left: 15rem;
   padding: 0;
   border-radius: 30px;
   background-color: hsl(0, 0%, 100%);
@@ -32,34 +40,33 @@ html, body {
 }
 
 .results {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-areas:
+  "circle" 
+  "text";
   text-align: center;
-  max-width: 450px;
-  padding: 3rem;
+  padding: 1rem;
+  /* width: 100%;
+  height: 100%; */
   background-image: linear-gradient(hsl(252, 100%, 67%), hsl(241, 81%, 54%));
   border-radius:  30px;
   color: hsl(241, 100%, 89%);
+
+  p {
+    margin: 1rem;
+  }
 }
 
-
-h2 {
-  color: hsl(0, 0%, 100%);
-  padding: 0;
-}
-
-.result {
-  font-size: 300%;
-  font-weight: 800;
-  margin: 1rem;
-}
-
-.result2 {
-  color: hsl(241, 100%, 89%);
+.circle-container {
+  grid-area: circle;
+  padding: 1rem;
 }
 
 .circle {
+  display: flex;
+  flex-direction: column;
   margin-left: 6rem;
+  padding: 1rem;
   height: 150px;
   width: 150px;
   border-radius: 50%;
@@ -68,21 +75,41 @@ h2 {
 }
 
 .text {
-  margin: .5rem;
-  padding: 0;
-} 
-
-.subtext {
-  margin: 2rem;
+  grid-area: text;
+  margin: 1rem;
   padding: 0;
 }
 
+p {
+  padding: .5rem;
+}
+
+h2 {
+  color: hsl(0, 0%, 100%);
+  padding: 0;
+}
+
+h4 {
+  margin-left: 1rem;
+}
+
+.result {
+  font-size: 300%;
+  font-weight: 800;
+  margin: 0;
+}
+
+.result2 {
+  color: hsl(241, 100%, 89%);
+}
+
 .summary {
-  display: flex;
-  flex-direction: column;
-  margin-top: 1rem;
-  margin-left: 3rem;
-  margin-right: 3rem;
+  grid-area: summary;
+  display: grid;
+
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
   color: hsl(224, 30%, 27%);
 }
 
@@ -91,11 +118,17 @@ h2 {
   flex-direction: row;
   align-items: center;
   font-size: 14px;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  border-radius: 10px;
+  margin-top: .5rem;
+  margin-bottom: .5rem;
 }
-
+ 
 img {
   margin-right: .5rem;
   margin-left: .5rem;
+  height: 20px;
 }
 
 .lowlight {
@@ -125,35 +158,25 @@ img {
 
 #reaction {
   background-color: rgba(255, 90, 87, 0.1);
-  border-radius: 10px;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
 }
 
 #memory {
   background-color: rgba(255, 176, 31, 0.1);
-  border-radius: 10px;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
 }
 
 #verbal {
   background-color: rgba(0, 189, 145, 0.1);
-  border-radius: 10px;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
 }
 
 #visual {
   background-color: rgba(17, 37, 212, 0.1);
-  border-radius: 10px;
-  margin-top: .5rem;
-  margin-bottom: .5rem;
 }
 
 .button-continue {
   border: none;
   margin-top: .5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
   padding: 14px 20px;
   text-align: center;
   text-decoration: none;
@@ -168,14 +191,41 @@ img {
 .attribution {
   font-size: 11px;
   text-align: center;
+  padding: 1rem;
 }
 .attribution a {
   color: hsl(228, 45%, 44%);
 }
 
 @media only screen and (max-width: 600px) {
+
+  .card {
+  max-width: 100%;
+  display: grid;
+  grid-template-areas:
+   "results"
+   "summary";
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr;
+  margin: 0;
+  border-bottom-left-radius:  0;
+  border-bottom-right-radius:  0;
+  box-shadow: none;
+  }
+
   .results {
-    display: flex;
-    flex-direction: column;
+    grid-column : 1 / 2;
+    border-top-left-radius:  0;
+    border-top-right-radius:  0;
+  }
+
+  .circle {
+    margin-left: 5.75rem;
+  }
+
+  .summary {
+    grid-column : 1 / 2;
+    margin: 0;
+    padding: 1rem;
   }
 }
