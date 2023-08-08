@@ -138,22 +138,22 @@ img {
 
 #reaction-head {
   color: hsl(0, 100%, 67%);
-  margin-right: 2rem;
+  margin-right: 7rem;
 }
 
 #memory-head {
   color: hsl(39, 100%, 56%);
-  margin-right: 2rem;
+  margin-right: 7rem;
 }
 
 #verbal-head {
   color: hsl(166, 100%, 37%);
-  margin-right: 3rem;
+  margin-right: 7.5rem;
 }
 
 #visual-head {
   color: hsl(234, 85%, 45%);
-  margin-right: 5rem;
+  margin-right: 7.5rem;
 }
 
 #reaction {
