@@ -186,6 +186,11 @@ img {
   color: hsl(0, 0%, 100%);
   font-size: 18px;
   font-weight: 500;
+  cursor: pointer;
+}
+
+.button-continue:hover {
+  background-color: hsl(241, 81%, 54%);
 }
 
 .attribution {
